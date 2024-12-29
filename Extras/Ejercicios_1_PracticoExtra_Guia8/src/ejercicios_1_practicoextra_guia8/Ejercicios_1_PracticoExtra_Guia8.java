@@ -1,11 +1,3 @@
-
-package ejercicios_1_practicoextra_guia8;
-
-import raicesservicio.RaicesServicio;
-
-public class Ejercicios_1_PracticoExtra_Guia8 {
-
-    public static void main(String[] args) {
         /**
          * Vamos a realizar una clase llamada Raices, donde representaremos los
          * valores de una ecuación de 2º grado. Tendremos los 3 coeficientes
@@ -30,9 +22,16 @@ public class Ejercicios_1_PracticoExtra_Guia8 {
          * 2o grado: (-b±√((b^2)-(4*a*c)))/(2*a) Solo varía el signo delante de
          * -b
          */
+package ejercicios_1_practicoextra_guia8;
+
+import Servicios.RaicesServicio;
+
+public class Ejercicios_1_PracticoExtra_Guia8 {
+
+    public static void main(String[] args) {
+
 
         RaicesServicio num = new RaicesServicio();
-
         /**
          * a = 1, b = 2, c = 1 (tiene una única solución)
          * a = 2, b = -7, c = 3 (tiene dos soluciones)

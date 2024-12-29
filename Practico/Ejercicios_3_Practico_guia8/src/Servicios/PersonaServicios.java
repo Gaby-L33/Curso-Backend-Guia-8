@@ -1,26 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ /**
+         * Realizar una clase llamada Persona en el paquete de entidades que
+         * tengan los siguientes atributos: nombre, edad, sexo (‘H’ para hombre,
+         * ‘M’ para mujer, ‘O’ para otro), peso y altura. Si desea añadir algún
+         * otro atributo, puede hacerlo. Agregar constructores, getters y
+         * setters. 
+         */
 package Servicios;
 import entidades.Persona;
 import java.util.Scanner;
 
-/**
- *
- * @author no_de
- */
 public class PersonaServicios {
 
     public PersonaServicios() {
-        
     }
     
     public String getNombre(Persona n){
         return n.getNombre();
     }
     
+        
     public boolean esMayorDeEdad(Persona n) {
         /*
           Método esMayorDeEdad(): indica si la persona es mayor de edad.
@@ -38,27 +36,28 @@ public class PersonaServicios {
         se deberá mostrar un mensaje
          */
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
-
+        
+        String sexo;
+        
         System.out.println("Ingrese el Nombre :");
         String nombre = leer.nextLine();
 
-        System.out.println("Ingrese el Edad :");
+        System.out.println("Ingrese la Edad :");
         int edad = leer.nextInt();
 
         System.out.println("Ingrese el Sexo H/M/O : ");
-        
-        String sexo = leer.next();
+        do{
+        sexo = leer.next();
         
         if (!sexo.equals("H") && !sexo.equals("M") && !sexo.equals("O")) {
             System.out.println(" Usted Ingreso mal el Sexo, vuelva a ingresarlo :");
-            sexo = leer.nextLine();
         } 
-     
+        }while(!sexo.equals("H") && !sexo.equals("M") && !sexo.equals("O"));
         
         System.out.println("Ingrese el Peso :");
         int peso = leer.nextInt();
 
-        System.out.println("Ingrese el Altura en Centimetros :");
+        System.out.println("Ingrese la Altura en Centimetros :");
         int altura = leer.nextInt();
 
         return new Persona(nombre, edad, sexo, peso, altura);

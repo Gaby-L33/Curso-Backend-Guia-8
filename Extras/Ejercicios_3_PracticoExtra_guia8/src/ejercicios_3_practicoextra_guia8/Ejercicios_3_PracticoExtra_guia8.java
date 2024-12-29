@@ -1,11 +1,3 @@
-package ejercicios_3_practicoextra_guia8;
-
-import pass.Pass;
-import passservicio.PassServicio;
-
-public class Ejercicios_3_PracticoExtra_guia8 {
-
-    public static void main(String[] args) {
     /** EJERCICIO 3
          * Crear una clase Pass, donde declaremos los siguientes atributos: ●
          * pass : Del tipo String ● nombre: Del tipo String ● dni: Del tipo int.
@@ -30,7 +22,15 @@ public class Ejercicios_3_PracticoExtra_guia8 {
          * cambios o D) Modificar DNI, donde primero debe poner su contraseña
          * para dar permiso, SINO impedir cambios
          */
-        
+package ejercicios_3_practicoextra_guia8;
+
+import Entidades.Pass;
+import Servicios.PassServicio;
+
+public class Ejercicios_3_PracticoExtra_guia8 {
+
+    public static void main(String[] args) {
+
         PassServicio per1 = new PassServicio();
         Pass p1 = new Pass();
         

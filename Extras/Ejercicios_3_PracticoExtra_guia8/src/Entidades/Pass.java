@@ -1,4 +1,8 @@
-package pass;
+/*
+* Crear una clase Pass, donde declaremos los siguientes atributos: 
+* ● pass : Del tipo String ● nombre: Del tipo String ● dni: Del tipo int.
+*/
+package Entidades;
 
 public class Pass {
    private String pass;

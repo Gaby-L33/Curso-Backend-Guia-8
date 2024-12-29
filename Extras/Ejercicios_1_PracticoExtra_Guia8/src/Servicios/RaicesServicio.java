@@ -1,8 +1,8 @@
 
-package raicesservicio;
+package Servicios;
 
 import java.util.Scanner;
-import raices.Raices;
+import Entidades.Raices;
 
 public class RaicesServicio {
   Raices r = new Raices();
@@ -60,7 +60,7 @@ public class RaicesServicio {
     }
 
     public void obtenerRaiz() {
-        /**
+        /*
          * Método obtenerRaiz(): llama a tieneRaiz() y si devolvió́  true imprime
          * una única raíz. Es en el caso en que se tenga una única solución
          * posible.
@@ -72,6 +72,13 @@ public class RaicesServicio {
     }
     
     public void calcular() {
+        /*
+        *  Método calcular(): esté  método llama
+         * tieneRaices() y a tieneRaiz(), y muestrar por pantalla las posibles
+         * soluciones que tiene nuestra ecuación con los métodos obtenerRaices()
+         * o obtenerRaiz(), según lo que devuelvan nuestros métodos y en caso de
+         * no existir solución, se mostrar un mensaje.
+         */
         if (tieneRaices() ) {
             obtenerRaices();
         } else if (tieneRaiz()) {

@@ -1,11 +1,3 @@
-package ejercicios_3_practico_guia8;
-
-import entidades.Persona;
-import Servicios.PersonaServicios;
-
-public class Ejercicios_3_Practico_guia8 {
-
-    public static void main(String[] args) {
  /**
          * Realizar una clase llamada Persona en el paquete de entidades que
          * tengan los siguientes atributos: nombre, edad, sexo (‘H’ para hombre,
@@ -39,6 +31,15 @@ public class Ejercicios_3_Practico_guia8 {
          * porcentaje de cuantos son mayores de edad y cuantos menores. Para
          * esto, podemos crear unos métodos adicionales.
          */
+package ejercicios_3_practico_guia8;
+
+import entidades.Persona;
+import Servicios.PersonaServicios;
+
+public class Ejercicios_3_Practico_guia8 {
+
+    public static void main(String[] args) {
+
         
         // Crear 4 Obtejos de persona
         
@@ -55,6 +56,24 @@ public class Ejercicios_3_Practico_guia8 {
         Vector [2] = p3;
         Vector [3] = p4;
         
+//        Inicializar un objeto de la clase Persona ejercicio 3 de la guía 8 Servicios, a null y tratar
+//        de invocar el método esMayorDeEdad() a través de ese objeto. Luego, englobe el código
+//        con una cláusula try-catch para probar la nueva excepción que debe ser controlada.
+        
+        //Incializar un objeto Persona a null
+        Persona pNull = null;
+        
+        //Intenta invocar el método esMayorDeEdad() en un objeto null
+        try{
+            if (n1.esMayorDeEdad(pNull)){
+                System.out.println("Es mayor de edad");
+            } else{
+                System.out.println("Es menor de edad");
+            }
+        } catch (NullPointerException e){
+            System.out.println("Se ha producido una excepción: " + e.getMessage());
+        }
+        
         for (int i = 0; i < 4; i++) {
             Persona p = Vector[i];
             if (n1.esMayorDeEdad(p)){
@@ -65,10 +84,13 @@ public class Ejercicios_3_Practico_guia8 {
             switch (n1.calcularIMC(p)) {
                 case 1:
                     System.out.println(n1.getNombre(p) + " : Debajo del Peso ideal");
+                    break;
                 case 0:
                     System.out.println(n1.getNombre(p) + " : Peso Ideal");
+                    break;
                 case -1:
-                    System.out.println(n1.getNombre(p) + " : Arriva del Peso ideal");
+                    System.out.println(n1.getNombre(p) + " : Arriba del Peso ideal");
+                    break;
             }
         }
     }

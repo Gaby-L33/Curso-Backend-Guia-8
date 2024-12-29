@@ -1,12 +1,3 @@
-
-package Entidad;
-
-import Servicios.CafeteraServicios;
-import java.util.Scanner;
-
-public class Ejercicio_2_Practico_Guia8 {
-
-    public static void main(String[] args) {
         /**
          * Programa Nespresso. Desarrolle una clase Cafetera en el paquete
          * Entidades con los atributos capacidadMáxima (la cantidad máxima de
@@ -27,13 +18,21 @@ public class Ejercicio_2_Practico_Guia8 {
          * el método lo recibe y se añade a la cafetera la cantidad de
          * café indicada.
          */
+package Entidad;
+
+import Servicios.CafeteraServicios;
+import java.util.Scanner;
+
+public class Ejercicio_2_Practico_Guia8 {
+
+    public static void main(String[] args) {
         
         CafeteraServicios Unidad1 = new CafeteraServicios();
-        Cafetera cafe = new Cafetera();
+        Cafetera cafe = new Cafetera(10,0);
         
         
         Scanner leer = new Scanner(System.in);
-        
+        //Muestra las opciones
         System.out.println("MENU : \n"
                 + "OPCION 1 - Llenar cafetera \n"
                 + "OPCION 2 - Vaciar cafetera \n"
@@ -41,12 +40,12 @@ public class Ejercicio_2_Practico_Guia8 {
                 + "OPCION 4 - Agregar cafe \n"
                 + "OPCION 5 - Salir");
         
-        int var;
+        int var; //Variable para elejir la opcion deseada
         
         do {
             System.out.println(" Que desea realizar ? ");
             var = leer.nextInt();
-        switch (var) {
+        switch (var) { //switch para elejir el metodo de la clase Servicios
             
             case 1:
                 Unidad1.llenarCafetera(cafe);

@@ -1,11 +1,3 @@
-package ejercicios_2_practicoextra_guia8;
-
-import java.util.Scanner;
-import nifservicios.NifServicio;
-
-public class Ejercicios_2_practicoextra_guia8 {
-
-    public static void main(String[] args) {
         /**
          * Dígito Verificador. Crear una clase NIF que se usará para mantener
          * DNIs con su correspondiente letra (NIF). Los atributos serán el
@@ -23,13 +15,21 @@ public class Ejercicios_2_practicoextra_guia8 {
          * buscar en un array (vector) de caracteres la posición que corresponda
          * al resto de la división para obtener la letra correspondiente. La
          * tabla de caracteres es la siguiente:
-         *
          */
+package ejercicios_2_practicoextra_guia8;
+
+import java.util.Scanner;
+import Servicios.NifServicio;
+
+public class Ejercicios_2_practicoextra_guia8 {
+
+    public static void main(String[] args) {
+
 
         NifServicio DNIs = new NifServicio();
         
         Scanner leer = new Scanner(System.in);
-        int var;
+        int var; //Variable para el menu
         System.out.println("OPCION 1 : Cargar DNI \n"
                     + "OPCION 2 : Mostrar DNI \n"
                     + "OPCION 3 : Salir");
